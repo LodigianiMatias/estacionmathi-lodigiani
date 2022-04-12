@@ -8,10 +8,10 @@ En el directorio del proyecto se puede ejecutar el comando:
 
 ### `npm start`
 
-Inicia la aplicación en modo desarrollador
+Inicia la aplicación en modo desarrollador.\
 Abra [http://localhost:3000](http://localhost:3000) para ver el proyecto en su navegador.
 
-La página se reiniciara cada vez que usted realice cambios en ella.\
+La página se reiniciara cada vez que usted realice cambios en ella.
 
 ### Que puedo hacer en Estacion Natural MaThi:
 
