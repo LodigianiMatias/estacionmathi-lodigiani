@@ -4,6 +4,6 @@ module.exports = {
     autoprefixer: {},
   },
   daisyui: {
-    themes: ["cupcake","light","dark"],
+    themes: [],
   },
 }
