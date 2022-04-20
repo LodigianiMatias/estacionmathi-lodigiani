@@ -3,10 +3,10 @@ import DaysiNavBar from './components/DaysiNavBar';
 import FooterDaysi from './components/FooterDaysi';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Saludo from './components/Saludo';
 import TableCarousel from './components/TableCarousel';
-import Card from './components/Card';
 import ConoceProductos from './components/ConoceProductos';
+import Contador from './components/Contador';
+import ItemListContainer from './components/ItemListContainer';
 
 
 
@@ -21,6 +21,8 @@ function App() {
       <body>
         <TableCarousel/>
         <ConoceProductos/>
+        <ItemListContainer producto="Producto" precio="$Precio"/>
+        <Contador/>
         {/*<Saludo name='Matias' edad='21' funcionalidad={myFunction}/>
         <Saludo name='Ana' edad='24'/>
 

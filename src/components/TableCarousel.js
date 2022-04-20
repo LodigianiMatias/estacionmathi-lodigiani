@@ -3,7 +3,7 @@ const TableCarousel = () => {
     <div id='tabla-principal' className="relative top-10 flex justify-center pb-5">
           <table id='renglon-tabla'>
             <tr >
-              <td className="bg-green-300 rounded-xl">
+              <td className="bg-green-200 rounded-xl">
                 <div data-aos="fade-right">
                   <h2 className='font-bold text-black max-w-screen-sm text-2xl'>Estacion Natural MaThi es un almacen natural ubicado en el barrio de Flores donde podrás encontrar todo tipo de productos, entre ellos apto diabéticos, celíacos, hipertensos. Tambien hay frutos secos, semillas, especias, legumbres, cereales, etc. Te invitamos a conocer nuestro local en Avenida Directorio 2565. </h2>
                 </div>
