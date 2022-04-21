@@ -7,33 +7,31 @@ import TableCarousel from './components/TableCarousel';
 import ConoceProductos from './components/ConoceProductos';
 import Contador from './components/Contador';
 import ItemListContainer from './components/ItemListContainer';
+import CountriesContainer from './components/CountriesContainer';
 
 
 
 function App() {
   AOS.init();
-  const myFunction = () => {/*logica*/}
+  const myFunction = () => {/*logica*/ }
   return (
     <div className="App text-center">
-      <header>
-        <DaysiNavBar />
-      </header>
-      <body>
-        <TableCarousel/>
-        <ConoceProductos/>
-        <ItemListContainer producto="Producto" precio="$Precio"/>
-        <Contador/>
-        {/*<Saludo name='Matias' edad='21' funcionalidad={myFunction}/>
-        <Saludo name='Ana' edad='24'/>
 
-        <Card>
-        <Saludo name='Jennifer' edad='32'/>
-         </Card> */}
-      </body>
-      <footer>
-        <FooterDaysi />
-      </footer>
-      
+      {/* Header */}
+      <DaysiNavBar />
+
+      {/* Body */}
+      <TableCarousel />
+      <ConoceProductos />
+      <ItemListContainer producto="Producto" precio="$Precio" />
+      <Contador />
+      <CountriesContainer />
+
+
+      {/* Footer */}
+      <FooterDaysi />
+
+
     </div>
   );
 }

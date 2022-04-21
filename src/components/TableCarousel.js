@@ -9,14 +9,14 @@ const TableCarousel = () => {
                 </div>
               </td>
               <td id='celda-carousel' className="max-w-screen-sm">
-                <div class="carousel w-full rounded-xl">
-                  <div id="item1" class="carousel-item w-full">
+                <div className="carousel w-full rounded-xl">
+                  <div id="item1" className="carousel-item w-full">
                     <img src="https://i.ibb.co/MScrFvJ/Estacion1.jpg" alt="Estacion1" border="0"/>
                   </div>
-                  <div id="item2" class="carousel-item w-full">
+                  <div id="item2" className="carousel-item w-full">
                     <img src="https://i.ibb.co/XJNdnSn/Estacion3.jpg" alt="Estacion3" border="0"/>
                   </div>
-                  <div id="item3" class="carousel-item w-full">
+                  <div id="item3" className="carousel-item w-full">
                     <img src="https://i.ibb.co/8BHcPpZ/Estacion2.jpg" alt="Estacion2" border="0"/>
                   </div>
                 </div>
@@ -26,10 +26,10 @@ const TableCarousel = () => {
               <td>
               </td>
               <td>
-              <div class="flex justify-center w-full py-2 gap-2 pb-10">
-                  <a href="#item1" class="btn btn-s hover:bg-green-500 bg-green-300 text-black">1</a>
-                  <a href="#item2" class="btn btn-s hover:bg-green-500 bg-green-300 text-black">2</a>
-                  <a href="#item3" class="btn btn-s hover:bg-green-500 bg-green-300 text-black">3</a>
+              <div className="flex justify-center w-full py-2 gap-2 pb-10">
+                  <a href="#item1" className="btn btn-s hover:bg-green-500 bg-green-300 text-black scroll-smooth">1</a>
+                  <a href="#item2" className="btn btn-s hover:bg-green-500 bg-green-300 text-black scroll-smooth">2</a>
+                  <a href="#item3" className="btn btn-s hover:bg-green-500 bg-green-300 text-black scroll-smooth">3</a>
                 </div>
               </td>
             </tr>

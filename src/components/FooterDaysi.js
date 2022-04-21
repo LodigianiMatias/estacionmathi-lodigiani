@@ -4,30 +4,30 @@ const FooterDaysi = () => {
     }
 
     return (
-        <div class="relative bottom-0 w-full">
-            <footer class="footer p-10  bg-black text-base-content position:relative; bottom: 0px">
+        <div className="relative bottom-0 w-full">
+            <footer className="footer p-10  bg-black text-base-content position:relative; bottom: 0px">
                 <div>
                     <img src="https://i.ibb.co/0sZMP3V/logo-reducido-black.png" className="h-28"></img>
-                    <p>Almacén natural minorista</p>
+                    <p className="text-2xl">Almacén natural minorista</p>
                 </div>
                 <div>
-                    <span class="footer-title" style={estilos}>MENU</span>
-                    <a class="link link-hover">Productos</a>
-                    <a class="link link-hover">Marcas</a>
-                    <a class="link link-hover">Dietas</a>
-                    <a class="link link-hover">Promociones</a>
+                    <span className="footer-title" style={estilos}>MENU</span>
+                    <a className="link link-hover">Productos</a>
+                    <a className="link link-hover">Marcas</a>
+                    <a className="link link-hover">Dietas</a>
+                    <a className="link link-hover">Promociones</a>
                 </div>
                 <div>
-                    <span class="footer-title" style={estilos}>AYUDA</span>
-                    <a class="link link-hover">Preguntas frecuentes</a>
-                    <a class="link link-hover">¿Cómo comprar?</a>
-                    <a class="link link-hover">Envios</a>
+                    <span className="footer-title" style={estilos}>AYUDA</span>
+                    <a className="link link-hover">Preguntas frecuentes</a>
+                    <a className="link link-hover">¿Cómo comprar?</a>
+                    <a className="link link-hover">Envios</a>
                 </div>
                 <div>
-                    <span class="footer-title" style={estilos}>CONTACTO</span>
-                    <a class="link link-hover">Avenida Directorio 2565, Flores CABA.</a>
-                    <a class="link link-hover">+54 9 11 0000-0000</a>
-                    <a class="link link-hover">estacionnaturalmathi@gmail.com</a>
+                    <span className="footer-title" style={estilos}>CONTACTO</span>
+                    <a className="link link-hover">Avenida Directorio 2565, Flores CABA.</a>
+                    <a className="link link-hover">+54 9 11 0000-0000</a>
+                    <a className="link link-hover">estacionnaturalmathi@gmail.com</a>
                 </div>
             </footer>
         </div>
