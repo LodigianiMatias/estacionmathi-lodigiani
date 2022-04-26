@@ -30,13 +30,20 @@ const Contador = () => {
       setCount(count - 1)
       }  
     }
+
+    const agregarCarrito = () => {
+      let cantidadProductos = count
+      console.log(cantidadProductos)
+      setCount(0)
+    }
     
 
   return (
       <>
       <button onClick={resHandler} className='border-1 border-black border-solid rounded-md text-3xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> - </button>
       <strong className="text-black text-2xl"> {count} </strong>
-      <button onClick={addHandler} className='border-1 border-black border-solid rounded-md text-3xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> + </button>
+      <button onClick={addHandler} className='border-1 border-black border-solid rounded-md text-3xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> + </button><br></br>
+      <butt onClick={agregarCarrito} className='border-1 border-black border-solid rounded-md text-3xl btn btn-s hover:bg-green-500 bg-green-300 text-black'>Comprar</butt>
       </>
   )
 }

@@ -7,7 +7,8 @@ import TableCarousel from './components/TableCarousel';
 import ConoceProductos from './components/ConoceProductos';
 import Contador from './components/Contador';
 import ItemListContainer from './components/ItemListContainer';
-import CountriesContainer from './components/CountriesContainer';
+import CardProduct from './components/CardProduct';
+
 
 
 
@@ -24,8 +25,8 @@ function App() {
       <TableCarousel />
       <ConoceProductos />
       <ItemListContainer producto="Producto" precio="$Precio" />
+      <CardProduct/>
       <Contador />
-      <CountriesContainer />
 
 
       {/* Footer */}
