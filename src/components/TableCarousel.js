@@ -2,6 +2,7 @@ const TableCarousel = () => {
   return (
     <div id='tabla-principal' className="relative top-10 flex justify-center pb-5">
           <table id='renglon-tabla'>
+            <tbody>
             <tr >
               <td className="bg-green-200 rounded-xl">
                 <div data-aos="fade-right">
@@ -33,6 +34,7 @@ const TableCarousel = () => {
                 </div>
               </td>
             </tr>
+            </tbody>
           </table>
         </div>
   )

@@ -8,6 +8,7 @@ import ConoceProductos from './components/ConoceProductos';
 import Contador from './components/Contador';
 import ItemListContainer from './components/ItemListContainer';
 import CardProduct from './components/CardProduct';
+import ItemList from './components/ItemList';
 
 
 
@@ -24,11 +25,7 @@ function App() {
       {/* Body */}
       <TableCarousel />
       <ConoceProductos />
-      <ItemListContainer producto="Producto" precio="$Precio" />
-      <CardProduct/>
-      <Contador />
-
-
+      <ItemListContainer/>
       {/* Footer */}
       <FooterDaysi />
 
