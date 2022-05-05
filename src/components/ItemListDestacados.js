@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { productosData } from "../data/productosData"
+import { productosDestacadosData } from "../data/productosDestacadosData"
 import Item from "./Item"
 
-const ItemList = () => {
+const ItemListDestacados = () => {
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const ItemList = () => {
     const getProductosList = () => {
       const promesa = new Promise((resolve) => {
         setTimeout( () => {
-            resolve(productosData)
+            resolve(productosDestacadosData)
         },1000)
       })
     
@@ -21,11 +21,10 @@ const ItemList = () => {
           setProductos(result);
       }) 
     }
-    
   return (
     <div>
         {productos.map(c => <Item key={c.id} productos={c}/>)}
     </div>
   )
 }
-export default ItemList
+export default ItemListDestacados

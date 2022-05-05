@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import ApiDetail from "./ApiDetail"
 
 const ApiList = () => {
-
     const [planetas, setPlanetas] = useState([])
 
     useEffect(() => {

@@ -3,13 +3,13 @@ import DaysiNavBar from './components/DaysiNavBar';
 import FooterDaysi from './components/FooterDaysi';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import TableCarousel from './components/TableCarousel';
-import ConoceProductos from './components/ConoceProductos';
-import Contador from './components/Contador';
-import ItemListContainer from './components/ItemListContainer';
-import CardProduct from './components/CardProduct';
-import ItemList from './components/ItemList';
-import ApiListContainer from './components/api-planetas/ApiListContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/paginas/Home';
+import Productos from './components/paginas/Productos';
+import ItemListUnico from './components/ItemListUnico';
+import Carrito from './components/paginas/Carrito';
+import Promociones from './components/paginas/Promociones';
+import MarcasContainer from './components/MarcasContainer';
 
 
 
@@ -20,19 +20,20 @@ function App() {
   return (
     <div className="App text-center">
 
-      {/* Header */}
-      <DaysiNavBar />
-
-      {/* Body */}
-      <TableCarousel />
-      <ConoceProductos />
-      <ItemListContainer/>
-
-      <ApiListContainer/>
-      {/* Footer */}
-      <FooterDaysi />
-
-
+      <BrowserRouter>
+        {/* Header */}
+        <DaysiNavBar />
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/productos' element={<Productos/>}></Route>
+          <Route path='/productos/:productoId' element={<ItemListUnico/>}/>
+          <Route path='/carrito' element={<Carrito/>}/>
+          <Route path='/promociones' element={<Promociones/>}></Route>
+          <Route path='/marcas/:marcaId' element={<MarcasContainer/>}></Route>
+        </Routes>
+        <FooterDaysi/>
+      </BrowserRouter>
+      
     </div>
   );
 }

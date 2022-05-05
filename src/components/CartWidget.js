@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CartWidget = () => {
 
     let keyCarrito = false;
@@ -20,9 +22,11 @@ const CartWidget = () => {
                     <div className="card-body">
                         <span className="font-bold text-lg">8 Items</span>
                         <span className="text-info">Subtotal: $999</span>
+                        <Link to={'/carrito'}>
                         <div className="card-actions">
-                            <button className="btn btn-primary btn-block">View cart</button>
+                        <button className="btn btn-primary btn-block">Ver Carrito</button>
                         </div>
+                        </Link>
                     </div>
                 </div>
             </div>
