@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import { productosData } from "../data/productosData"
-import Contador from "./Contador"
 
 const Item = (props) => {
 

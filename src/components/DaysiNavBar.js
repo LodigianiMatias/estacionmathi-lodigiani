@@ -13,7 +13,7 @@ const DaysiNavBar = () => {
                 <div className="dropdown dropdown-hover">
                     <label tabIndex="0" className="btn-ghost m-1 font-bold text-white text-3xl underline"><Link to={'/productos'}>Productos</Link></label>
                     <ul tabIndex="0" className="dropdown-content menu text-white p-2 shadow bg-base-100 rounded-box w-52 bg-green-700 border-solid border-2 border-white outline-cyan-500">
-                        {productosData.map(p=> <li className="font-bold"><Link to={`/productos/${p.producto}`}>{p.producto}</Link></li>)}
+                        {productosData.map(p=> <li key={p.id} className="font-bold"><Link to={`/productos/${p.producto}`}>{p.producto}</Link></li>)}
                     </ul>         
                 </div>
             </div>
@@ -22,7 +22,7 @@ const DaysiNavBar = () => {
                     
                     <label tabIndex="0" className="btn-ghost m-1 font-bold text-white text-3xl underline">Marcas</label>
                     <ul tabIndex="0" className="dropdown-content menu text-white p-2 shadow bg-base-100 rounded-box w-52 bg-green-700 border-solid border-2 border-white outline-cyan-500">
-                        {marcasData.map(m=> <li className="font-bold"><Link to={`/marcas/${m.marca}`}>{m.marca}</Link></li>)}
+                        {marcasData.map(m=> <li key={m.id} className="font-bold"><Link to={`/marcas/${m.marca}`}>{m.marca}</Link></li>)}
                     </ul>         
                 </div>
             </div>

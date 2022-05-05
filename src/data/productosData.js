@@ -19,7 +19,7 @@ export const productosData = [
     },
     {
         id: 3,
-        producto: 'Cous-Cous',
+        producto: 'Cous-Cous x500grs',
         marca: 'Ararat',
         descripcion: 'CALIDAD: Grado alimenticio, cocción y molienda fresca de sémola de trigo candeal puro, libre de defectos, materias extrañas, impurezas o aditivos. Ausencia de insectos vivos o muertos, larva y/o huevos.',
         stock: 10,
@@ -64,7 +64,7 @@ export const productosData = [
     },
     {
         id: 8,
-        producto: 'Tofu x350grs',
+        producto: 'Tofu natural x350grs',
         marca: 'Soyana',
         descripcion: 'Se puede consumir crudo. No requiere cocción, pero es ideal para preparar las recetas más creativas. Ingredientes: Semillas de soja de cultivo orgánico, agua, cloruro de calcio.',
         stock: 10,

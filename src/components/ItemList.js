@@ -12,13 +12,13 @@ const ItemList = () => {
     const getProductosList = () => {
       const promesa = new Promise((resolve) => {
         setTimeout( () => {
-            resolve(productosData)
+          resolve(productosData)
         },1000)
       })
     
     promesa
       .then( result => {
-          setProductos(result);
+        setProductos(result);
       }) 
     }
     
