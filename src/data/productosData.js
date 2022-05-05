@@ -115,5 +115,14 @@ export const productosData = [
         stock:10 ,
         precio: 480,
         img: 'https://i.ibb.co/Vqyzzy8/nutree-indian.jpg'
+    },
+    {
+        id: 14,
+        producto: 'Trigo Burgol',
+        marca: 'Ararat',
+        descripcion: 'ORIGEN: Trigo Burgol elaborado con Trigo Candeal (Triticum Durum).Elaborado a través de un proceso de cocción, sacado y molienda del grano en distintas granulometrías. CALIDAD: Grado alimenticio, cocción y molienda fresca de trigo candeal puro, libre de defectos, materias extrañas, impurezas o aditivos.',
+        stock:10 ,
+        precio: 200,
+        img: 'https://i.ibb.co/v4080qC/trigo-burgol-extra-fino-molinos-ararat.png'
     }
 ]

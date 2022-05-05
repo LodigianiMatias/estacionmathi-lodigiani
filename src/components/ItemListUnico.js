@@ -42,9 +42,6 @@ const ItemListUnico = () => {
           </tbody>
         </table>
       </div>
-
-
-
     </div>
   )
 }

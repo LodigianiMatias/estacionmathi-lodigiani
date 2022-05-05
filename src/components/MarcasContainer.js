@@ -2,29 +2,37 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { marcasData } from "../data/marcasData"
 import { productosData } from "../data/productosData"
+import Item from "./Item"
 
 const MarcasContainer = () => {
 
   const { marcaId } = useParams()
-  const [marca, setMarca] = useState({})
   const [marcaFind, setMarcaFind] = useState([])
 
   useEffect(() => {
-    setMarca(marcasData.find(f => f.marca == marcaId))
-
-    productosData.map(m => {
-      if(m.marca == marcaId) {
-        setMarcaFind(m)
-        console.log(m);
-      } 
-    }) 
+    setearMarcas()
   }, [marcaId])
+
+  const setearMarcas = () => {
+    const promesa = new Promise((resolve) => {
+      resolve(productosData)
+    }) 
+
+    promesa
+      .then(m => {
+        const result = m.filter(a => {
+          if(a.marca == marcaId) {
+            return(a)
+          } 
+        }) 
+        setMarcaFind(result)
+      })
+  }
   
-
-
   return (
     <div>
-      <div className="text-6xl text-black underline m-10 font-bold">{marcaId}</div>
+      <h1 className="text-6xl font-bold text-black underline mt-2">{marcaId}</h1>
+      {marcaFind.map(c => <Item key={c.id} productos={c}/>)}
     </div>
   )
 }
