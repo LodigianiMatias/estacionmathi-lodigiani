@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/paginas/Home';
 import Productos from './components/paginas/Productos';
-import ItemListUnico from './components/ItemListUnico';
+import ItemListUnico from './components/itemList/ItemListUnico';
 import Carrito from './components/paginas/Carrito';
 import Promociones from './components/paginas/Promociones';
 import MarcasContainer from './components/MarcasContainer';
@@ -19,6 +19,7 @@ function App() {
   AOS.init();
   const myFunction = () => {/*logica*/ }
   return (
+    
     <div className="App text-center">
         <BrowserRouter>
           {/* Header */}

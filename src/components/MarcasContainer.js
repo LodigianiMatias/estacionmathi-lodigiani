@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { marcasData } from "../data/marcasData"
 import { productosData } from "../data/productosData"
-import Item from "./Item"
+import Item from "./itemList/items/Item"
 
 const MarcasContainer = () => {
 

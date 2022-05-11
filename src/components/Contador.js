@@ -8,7 +8,7 @@ const Contador = ({}) => {
   const {productoId} = useParams()
   const [stock, setStock] = useState({})
 
-  const { addToCart } = useCartContext()
+  /*const { addToCart } = useCartContext()*/
   
   useEffect(() => {
     setStock(productosData.find(p => p.producto == productoId))
@@ -33,11 +33,10 @@ const Contador = ({}) => {
   }
   }
 
-  const handleClick = (id , cantidad) => {
-    const findProduct = productosData.find((producto) => producto.id == id)
-    addToCart(findProduct, cantidad)
+  /*const handleClick = (stock, count) => {
+    addToCart(stock, count)
     setEstado(false)
-  }
+  }*/
 
   return (
     <div>
@@ -47,7 +46,7 @@ const Contador = ({}) => {
       <button onClick={resHandler} className='border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> - </button>
       <strong className="border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black"> {count} </strong>
       <button onClick={addHandler} className='border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> + </button><br></br>
-      <button onClick={() => handleClick(id, count)} className='border-1 border-black border-solid rounded-md text-2xl btn btn-s hover:bg-green-500 bg-green-300 text-black'>agregar al carrito</button>
+      <button onClick={agregarCarrito} /*onClick={() => handleClick(count)}*/ className='border-1 border-black border-solid rounded-md text-2xl btn btn-s hover:bg-green-500 bg-green-300 text-black'>agregar al carrito</button>
     </div>}
     {!estado && 
       <div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { productosData } from "../data/productosData"
-import Contador from "./Contador"
+import { productosData } from "../../../data/productosData"
+import Contador from "../../Contador"
 
 const ItemDetail = () => {
   return (
