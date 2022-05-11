@@ -10,6 +10,7 @@ import ItemListUnico from './components/ItemListUnico';
 import Carrito from './components/paginas/Carrito';
 import Promociones from './components/paginas/Promociones';
 import MarcasContainer from './components/MarcasContainer';
+import CartContextProvider from './components/context/CartContext';
 
 
 
@@ -19,21 +20,19 @@ function App() {
   const myFunction = () => {/*logica*/ }
   return (
     <div className="App text-center">
-
-      <BrowserRouter>
-        {/* Header */}
-        <DaysiNavBar />
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/productos' element={<Productos/>}></Route>
-          <Route path='/productos/:productoId' element={<ItemListUnico/>}/>
-          <Route path='/carrito' element={<Carrito/>}/>
-          <Route path='/promociones' element={<Promociones/>}></Route>
-          <Route path='/marcas/:marcaId' element={<MarcasContainer/>}></Route>
-        </Routes>
-        <FooterDaysi/>
-      </BrowserRouter>
-      
+        <BrowserRouter>
+          {/* Header */}
+          <DaysiNavBar />
+          <Routes>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/productos' element={<Productos />}></Route>
+            <Route path='/productos/:productoId' element={<ItemListUnico />} />
+            <Route path='/carrito' element={<Carrito />} />
+            <Route path='/promociones' element={<Promociones />}></Route>
+            <Route path='/marcas/:marcaId' element={<MarcasContainer />}></Route>
+          </Routes>
+          <FooterDaysi />
+        </BrowserRouter>
     </div>
   );
 }

@@ -24,10 +24,10 @@ const ItemListUnico = () => {
                   <div data-aos="zoom-in" className="card  inline-block w-auto  bg-base-100 shadow-xl">
                     <figure><img src={product.img} className="h-96" alt="imagen" /></figure>
                     <div className="card-body ">
-                      <h2 className="card-title justify-center text-2xl text-white w-2/4 left-1/4 right-1/4 relative">{product.producto} {product.marca}</h2>
-                      <p className="text-4xl text-white">${product.precio}</p>
+                      <span className="card-title justify-center text-2xl text-white w-2/4 left-1/4 right-1/4 relative">{product.producto} {product.marca}</span>
+                      <span className="text-4xl text-white">${product.precio}</span>
                       <div className="card-actions justify-center">
-                        <Contador />
+                        <Contador/>
                       </div>
                     </div>
                   </div>

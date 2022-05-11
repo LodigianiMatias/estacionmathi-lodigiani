@@ -13,7 +13,7 @@ export const productosData = [
         producto: 'Helado DDL',
         marca: 'Too Good',
         descripcion: 'INGREDIENTES: Agua, Espesante, Polidextrosa, Edulcorante Nutritivo: Fructuosa; Edulcorante: Isomaltosa; Diluyente: Maltodextrosa, Goma Guar, Monoestearato de Glicerido; Estabilizante: Fosfato de Sodio; Regulador de Acidez: Fosfato de Calcio, Leche en Polvo Descremada, Saborizante: Dulce de Leche.CONTIENE LECHE.',
-        stock: 10,
+        stock: 5,
         precio: 400,
         img: 'https://i.ibb.co/CB6SZ9r/helado-too-good.jpg',
     },
