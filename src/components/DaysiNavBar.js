@@ -2,7 +2,21 @@ import { Link } from "react-router-dom"
 import { productosData  } from "../data/productosData"
 import CartWidget from "./CartWidget"
 import {marcasData} from "../data/marcasData"
+import { collection, getDocs, getFirestore } from "firebase/firestore"
+import { useEffect, useState } from "react"
 const DaysiNavBar = () => {
+    const [productos, setProductos] = useState([])
+
+    useEffect(() => {
+      //getProductosList()
+      const db = getFirestore();
+
+      const itemsCollection = collection(db,"productosData")
+      getDocs(itemsCollection).then((snapshot) => {
+        setProductos(snapshot.docs.map((doc) => (doc.data())))
+      })
+    },[])
+
     return (
         <div className="navbar h-32">
             <div className="flex-1 ">
@@ -13,7 +27,7 @@ const DaysiNavBar = () => {
                 <div className="dropdown dropdown-hover">
                     <label tabIndex="0" className="btn-ghost m-1 font-bold text-white text-3xl underline"><Link to={'/productos'}>Productos</Link></label>
                     <ul tabIndex="0" className="dropdown-content menu text-white p-2 shadow bg-base-100 rounded-box w-52 bg-green-700 border-solid border-2 border-white outline-cyan-500">
-                        {productosData.map(p=> <li key={p.id} className="font-bold"><Link to={`/productos/${p.producto}`}>{p.producto}</Link></li>)}
+                        {productos.map(p=> <li key={p.id} className="font-bold"><Link to={`/productos/${p.producto}`}>{p.producto}</Link></li>)}
                     </ul>         
                 </div>
             </div>

@@ -1,3 +1,4 @@
+import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { productosData } from "../../data/productosData"
 import Item from "./items/Item"
@@ -6,21 +7,15 @@ const ItemList = () => {
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
-      getProductosList()
-    },[])
+      //getProductosList()
+      const db = getFirestore();
 
-    const getProductosList = () => {
-      const promesa = new Promise((resolve) => {
-        setTimeout( () => {
-          resolve(productosData)
-        },1000)
+      const itemsCollection = collection(db,"productosData")
+     
+      getDocs(itemsCollection).then((snapshot) => {
+        setProductos(snapshot.docs.map((doc) => (doc.data())))
       })
-    
-    promesa
-      .then( result => {
-        setProductos(result);
-      }) 
-    }
+    },[])
     
   return (
     <div>

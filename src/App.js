@@ -11,13 +11,13 @@ import Carrito from './components/paginas/Carrito';
 import Promociones from './components/paginas/Promociones';
 import MarcasContainer from './components/MarcasContainer';
 import CartContextProvider from './components/context/CartContext';
+import ProductDetail from './components/firebase-examples/ProductDetail';
 
 
 
 
 function App() {
   AOS.init();
-  const myFunction = () => {/*logica*/ }
   return (
     
     <div className="App text-center">
@@ -31,6 +31,7 @@ function App() {
             <Route path='/carrito' element={<Carrito />} />
             <Route path='/promociones' element={<Promociones />}></Route>
             <Route path='/marcas/:marcaId' element={<MarcasContainer />}></Route>
+            <Route path='/productDetail' element={<ProductDetail />}></Route>
           </Routes>
           <FooterDaysi />
         </BrowserRouter>
