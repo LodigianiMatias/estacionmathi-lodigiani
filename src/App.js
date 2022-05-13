@@ -13,9 +13,6 @@ import MarcasContainer from './components/MarcasContainer';
 import CartContextProvider, { CartProvider } from './components/context/CartContext';
 import ProductDetail from './components/firebase-examples/ProductDetail';
 
-
-
-
 function App() {
   AOS.init();
   return (
