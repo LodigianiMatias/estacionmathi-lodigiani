@@ -7,7 +7,7 @@ const Home = () => {
     <div>
         <TableCarousel/>
         <ConoceProductos/>
-        <ItemListDestacados/>
+        {/* <ItemListDestacados/> */}
     </div>
   )
 }

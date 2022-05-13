@@ -1,14 +1,14 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom";
-import { productosData } from "../data/productosData"
 import { useCartContext } from "./context/CartContext";
 
 const Contador = ({}) => {
 
   const {productoId} = useParams()
   const [stock, setStock] = useState([])
-  const [stockEncontrado, setStockEncontrado] = useState({})
+  const [estado, setEstado] = useState(true)
+  const [count, setCount] = useState(0)
 
   /*const { addToCart } = useCartContext()*/
   
@@ -16,18 +16,17 @@ const Contador = ({}) => {
     const db = getFirestore();
     const itemsCollection = collection(db,"productosData")
     getDocs(itemsCollection).then((snapshot) => {
-      setStock(snapshot.docs.map((doc) => (doc.data())))
-      setStockEncontrado(stock.filter(d => d.producto == productoId))
+      snapshot.docs.map((doc) => {
+        if(doc.data().producto == productoId) {
+          setStock(doc.data())
+        }
+      })
     })
-    
-    
-    /*setStock(productosData.find(p => p.producto == productoId))*/
-  }, [productoId])
-  const [estado, setEstado] = useState(true)
-  const [count, setCount] = useState(0)
+  }, [productoId, estado])
+  
 
   const addHandler = () => {
-    if (count < stockEncontrado.stock) {
+    if (count < stock.stock) {
       setCount(count + 1)
     }
   }
@@ -52,7 +51,7 @@ const Contador = ({}) => {
     <div>
       {estado && 
       <div>
-      <div>Stock: {stockEncontrado.stock}</div>
+      <div>Stock: {stock.stock}</div>
       <button onClick={resHandler} className='border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> - </button>
       <strong className="border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black"> {count} </strong>
       <button onClick={addHandler} className='border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> + </button><br></br>

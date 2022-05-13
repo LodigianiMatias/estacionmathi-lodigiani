@@ -1,38 +1,27 @@
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { marcasData } from "../data/marcasData"
-import { productosData } from "../data/productosData"
 import Item from "./itemList/items/Item"
 
 const MarcasContainer = () => {
 
   const { marcaId } = useParams()
-  const [marcaFind, setMarcaFind] = useState([])
+  const [marcas, setMarcas] = useState([])
 
   useEffect(() => {
-    setearMarcas()
+    const db = getFirestore();
+
+    const marcasCollection = collection(db,"productosData")
+      getDocs(marcasCollection).then((snapshot)=> {
+        const resultado = snapshot.docs.map((doc) => doc.data())
+        setMarcas(resultado.filter(d => d.marca == marcaId))
+      })  
   }, [marcaId])
-
-  const setearMarcas = () => {
-    const promesa = new Promise((resolve) => {
-      resolve(productosData)
-    }) 
-
-    promesa
-      .then(m => {
-        const result = m.filter(a => {
-          if(a.marca == marcaId) {
-            return(a)
-          } 
-        }) 
-        setMarcaFind(result)
-      })
-  }
   
   return (
     <div>
       <h1 className="text-6xl font-bold text-black underline mt-2">{marcaId}</h1>
-      {marcaFind.map(c => <Item key={c.id} productos={c}/>)}
+      {marcas.map(c => <Item key={c.id} productos={c}/>)}
     </div>
   )
 }

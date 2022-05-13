@@ -7,20 +7,17 @@ import Contador from "../Contador"
 const ItemListUnico = () => {
   const { productoId } = useParams()
   const [product, setProduct] = useState([])
-  const [productoEncontrado, setProductoEncontrado] = useState({})
 
   useEffect(() => {
     const db = getFirestore();
     const itemsCollection = collection(db,"productosData")
     getDocs(itemsCollection).then((snapshot) => {
-      setProduct(snapshot.docs.map((doc) => (doc.data())))
-      setProductoEncontrado(product.find(p => p.producto == productoId))
-    
+      snapshot.docs.map((doc) => {
+        if(doc.data().producto == productoId) {
+          setProduct(doc.data())
+        }
+      })
     })
-      
-      console.log(productoEncontrado);
-
-    /*setProduct(productosData.find(p => p.producto == productoId))*/
   }, [productoId])
 
 
@@ -33,10 +30,10 @@ const ItemListUnico = () => {
               <td className="bg-green-200 rounded-xl">
                 <div data-aos="fade-right">
                   <div data-aos="zoom-in" className="card  inline-block w-auto  bg-base-100 shadow-xl">
-                    <figure><img src={productoEncontrado.img} className="h-96" alt="imagen" /></figure>
+                    <figure><img src={product.img} className="h-96" alt="imagen" /></figure>
                     <div className="card-body ">
-                      <span className="card-title justify-center text-2xl text-white w-2/4 left-1/4 right-1/4 relative">{productoEncontrado.producto} {product.marca}</span>
-                      <span className="text-4xl text-white">${productoEncontrado.precio}</span>
+                      <span className="card-title justify-center text-2xl text-white w-2/4 left-1/4 right-1/4 relative">{product.producto} {product.marca}</span>
+                      <span className="text-4xl text-white">${product.precio}</span>
                       <div className="card-actions justify-center">
                         <Contador/>
                       </div>
@@ -46,7 +43,7 @@ const ItemListUnico = () => {
               </td>
               <td id='celda-carousel' className="max-w-screen-sm bg-green-200">
               <div data-aos="fade-right">
-              <h2 className='font-bold relative text-black max-w-screen-sm text-3xl w-2/4 left-1/4 right-1/4'> {productoEncontrado.descripcion} </h2>
+              <h2 className='font-bold relative text-black max-w-screen-sm text-3xl w-2/4 left-1/4 right-1/4'> {product.descripcion} </h2>
                 </div>
               </td>
             </tr>

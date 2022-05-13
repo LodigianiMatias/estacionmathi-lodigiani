@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 
 const Item = (props) => {
 
   const { id, producto, marca, stock, precio, img } = props.productos
-
   return (
     <Link to={`/productos/${producto}`}>
     <div data-aos="zoom-in" className="card  inline-block w-auto m-10 bg-base-100 shadow-xl hover:bg-sky-700">
