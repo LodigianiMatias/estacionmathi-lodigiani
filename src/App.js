@@ -10,7 +10,7 @@ import ItemListUnico from './components/itemList/ItemListUnico';
 import Carrito from './components/paginas/Carrito';
 import Promociones from './components/paginas/Promociones';
 import MarcasContainer from './components/MarcasContainer';
-import CartContextProvider from './components/context/CartContext';
+import CartContextProvider, { CartProvider } from './components/context/CartContext';
 import ProductDetail from './components/firebase-examples/ProductDetail';
 
 
@@ -19,7 +19,8 @@ import ProductDetail from './components/firebase-examples/ProductDetail';
 function App() {
   AOS.init();
   return (
-    <div className="App text-center">
+    <CartProvider>
+      <div className="App text-center">
         <BrowserRouter>
           {/* Header */}
           <DaysiNavBar />
@@ -34,7 +35,8 @@ function App() {
           </Routes>
           <FooterDaysi />
         </BrowserRouter>
-    </div>
+      </div>
+    </CartProvider>
   );
 }
 
