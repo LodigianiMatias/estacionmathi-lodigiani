@@ -19,7 +19,6 @@ import ProductDetail from './components/firebase-examples/ProductDetail';
 function App() {
   AOS.init();
   return (
-    
     <div className="App text-center">
         <BrowserRouter>
           {/* Header */}
