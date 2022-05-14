@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react"
 
 export const CartContext = createContext({
-    cart: [],
+    carrito: [],
 })
 
 export const useCartContext = () => {
@@ -15,7 +15,7 @@ export const CartProvider = ( {children} ) => {
         setCarrito( current => {
             return current.concat( p )
         })
-        console.log(carrito);
+        console.log(carrito.count);
     }
 
     const clearCart = () => {

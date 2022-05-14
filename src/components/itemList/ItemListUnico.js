@@ -27,7 +27,7 @@ const ItemListUnico = () => {
         <table id='renglon-tabla'>
           <tbody>
             <tr >
-              <td className="bg-green-200 rounded-xl">
+              <td className="rounded-xl">
                 <div data-aos="fade-right">
                   <div data-aos="zoom-in" className="card  inline-block w-auto  bg-base-100 shadow-xl">
                     <figure><img src={product.img} className="h-96" alt="imagen" /></figure>
@@ -41,9 +41,9 @@ const ItemListUnico = () => {
                   </div>
                 </div>
               </td>
-              <td id='celda-carousel' className="max-w-screen-sm bg-green-300">
+              <td id='celda-carousel' className="max-w-screen-sm bg-green-300 rounded-xl">
               <div data-aos="fade-right">
-              <h2 className='font-bold relative max-w-screen-sm text-3xl w-2/4 left-1/4 right-1/4'> {product.descripcion} </h2>
+              <h2 className='font-bold relative max-w-screen-sm text-3xl w-2/4 left-1/4 right-1/4 text-black'> {product.descripcion} </h2>
                 </div>
               </td>
             </tr>

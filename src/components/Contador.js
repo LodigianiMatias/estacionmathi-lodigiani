@@ -36,15 +36,9 @@ const Contador = ({ }) => {
       setCount(count - 1)
     }
   }
-  const agregarCarrito = () => {
-    if (!count == 0) {
-      console.log({ count });
-      setEstado(false)
-    }
-  }
   const handleClick = () => {
     if (!count == 0) {
-      addToCart(stock.id , stock.img, stock.producto , {count})
+      addToCart(stock , count)
       setEstado(false)
     }
   }
