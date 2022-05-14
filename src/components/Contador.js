@@ -53,7 +53,7 @@ const Contador = ({ }) => {
     <div>
       {estado &&
         <div>
-          <div>Stock: {stock.stock}</div>
+          <div className="text-white">Stock: {stock.stock}</div>
           <button onClick={resHandler} className='border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> - </button>
           <strong className="border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black"> {count} </strong>
           <button onClick={addHandler} className='border-1 border-black border-solid rounded-md text-xl w-12 btn btn-s hover:bg-green-500 bg-green-300 text-black'> + </button><br></br>

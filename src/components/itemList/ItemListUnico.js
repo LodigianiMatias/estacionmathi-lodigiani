@@ -31,7 +31,7 @@ const ItemListUnico = () => {
                 <div data-aos="fade-right">
                   <div data-aos="zoom-in" className="card  inline-block w-auto  bg-base-100 shadow-xl">
                     <figure><img src={product.img} className="h-96" alt="imagen" /></figure>
-                    <div className="card-body ">
+                    <div className="card-body bg-slate-800">
                       <span className="card-title justify-center text-2xl text-white w-2/4 left-1/4 right-1/4 relative">{product.producto} {product.marca}</span>
                       <span className="text-4xl text-white">${product.precio}</span>
                       <div className="card-actions justify-center">
@@ -41,9 +41,9 @@ const ItemListUnico = () => {
                   </div>
                 </div>
               </td>
-              <td id='celda-carousel' className="max-w-screen-sm bg-green-200">
+              <td id='celda-carousel' className="max-w-screen-sm bg-green-300">
               <div data-aos="fade-right">
-              <h2 className='font-bold relative text-black max-w-screen-sm text-3xl w-2/4 left-1/4 right-1/4'> {product.descripcion} </h2>
+              <h2 className='font-bold relative max-w-screen-sm text-3xl w-2/4 left-1/4 right-1/4'> {product.descripcion} </h2>
                 </div>
               </td>
             </tr>
