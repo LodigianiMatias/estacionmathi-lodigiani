@@ -25,7 +25,7 @@ const Carrito = () => {
         <li
           className="text-xl font-bold text-black m-10 " key={c.id}>
           <img src={c.img} className="h-48 inline-block"></img>
-          {c.producto} cantidad:{c.count}
+          {c.producto} cantidad:{c.quantity}
           <button onClick={deleteFromCart} className='border-1 border-black border-solid rounded-md text-xl btn btn-s hover:bg-green-500 bg-green-300 text-black'>Borrar producto</button>
         </li>)}
       <button onClick={clearCart} className='border-1 border-black border-solid rounded-md text-xl btn btn-s hover:bg-green-500 bg-green-300 text-black mb-20'>

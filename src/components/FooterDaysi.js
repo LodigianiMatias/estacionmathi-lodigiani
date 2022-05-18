@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const FooterDaysi = () => {
     const estilos = {
         color: 'green'
@@ -12,11 +14,9 @@ const FooterDaysi = () => {
                 </div>
                 <div>
                     <span className="footer-title" style={estilos}>MENU</span>
-                    <a className="link link-hover">Productos</a>
-                    <a className="link link-hover">Marcas</a>
-                    <a className="link link-hover">Dietas</a>
-                    <a className="link link-hover">Promociones</a>
-                </div>
+                    <Link to={'/productos'} className="link link-hover">Productos</Link>
+                    <Link to={'/marcas'} className="link link-hover">Marcas</Link>
+                    <Link to={'/promociones'} className="link link-hover">Promociones</Link>                </div>
                 <div>
                     <span className="footer-title" style={estilos}>AYUDA</span>
                     <a className="link link-hover">Preguntas frecuentes</a>

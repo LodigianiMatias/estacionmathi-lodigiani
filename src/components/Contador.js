@@ -36,9 +36,8 @@ const Contador = ({ }) => {
       setCount(count - 1)
     }
   }
-  const handleClick = () => {
+  const handleClick = (producto, cantidad) => {
     if (!count == 0) {
-      console.log(count);
       addToCart(stock, count)
       setEstado(false)
     }

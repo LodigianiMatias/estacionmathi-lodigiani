@@ -28,8 +28,10 @@ export const CartProvider = ( {children} ) => {
         } 
 
         setCarrito( current => {
-            return current.concat(producto)
+           return current.concat(producto)
+            
         })  
+        console.log(carrito.count);
     }
 
     const deleteFromCart = (producto) => {

@@ -22,8 +22,8 @@ const ItemListUnico = () => {
 
 
   return (
-    <div className="pb-14">
-      <div id='tabla-principal' className="relative top-10 flex justify-center">
+    <div className="pt-10 pb-10">
+      <div id='tabla-principal' className="relative flex justify-center">
         <table id='renglon-tabla'>
           <tbody>
             <tr >
