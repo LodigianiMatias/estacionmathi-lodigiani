@@ -13,7 +13,7 @@ export const CartProvider = ( {children} ) => {
 
     const isInCart = (id) => carrito.find((producto) => producto.id == id)
 
-    const addToCart = (producto, cantidad) => {
+    const addToCart = (producto) => {
         const newCarrito = [...carrito]
 
         const productoEnCarrito = isInCart(producto.id)
@@ -21,29 +21,18 @@ export const CartProvider = ( {children} ) => {
         if (productoEnCarrito) {
             newCarrito[
                 newCarrito.findIndex((prod) => prod.id == productoEnCarrito.id)
-            ].quantity += cantidad
-
+            ]. cantidad = producto.cantidad
             setCarrito(newCarrito)
             return
         } 
 
         setCarrito( current => {
            return current.concat(producto)
-            
         })  
-        console.log(carrito.count);
     }
 
-    const deleteFromCart = (producto) => {
-		const newCart = [...carrito]
-
-        const productoEnCarrito = isInCart(producto.id)
-
-        if (productoEnCarrito) {
-            console.log(productoEnCarrito);
-        }
-
-		const deleteProduct = newCart.filter((prod) => prod.id !== producto.id)
+    const deleteFromCart = (id) => {
+		const deleteProduct = carrito.filter((prod) => prod.id !== id)
 		setCarrito(deleteProduct)
 	}
 
@@ -58,6 +47,7 @@ export const CartProvider = ( {children} ) => {
         addToCart,
         clearCart,
         setCarrito,
+        isInCart,
     }
 
     return (

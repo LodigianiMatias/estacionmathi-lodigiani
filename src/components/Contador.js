@@ -5,14 +5,25 @@ import { useCartContext } from "./context/CartContext";
 
 const Contador = ({ }) => {
 
+  const { addToCart, carrito } = useCartContext()
   const { productoId } = useParams()
   const [stock, setStock] = useState([])
   const [estado, setEstado] = useState(true)
   const [count, setCount] = useState(0)
-
-  const { addToCart } = useCartContext()
+  
 
   useEffect(() => {
+    if (carrito.find((buscar) => buscar.producto == productoId)) {
+      carrito.map((setearBuscado) => {
+        if (setearBuscado.producto == productoId) {
+          setCount(setearBuscado.cantidad)
+        }
+      })
+    } else {
+      setCount(0)
+    }
+    
+
     const db = getFirestore();
     const itemsCollection = collection(db, "productosData")
     getDocs(itemsCollection).then((snapshot) => {
@@ -23,7 +34,8 @@ const Contador = ({ }) => {
       })
     })
     setEstado(true)
-  }, [productoId, count])
+  }, [productoId])
+
 
 
   const addHandler = () => {
@@ -36,9 +48,10 @@ const Contador = ({ }) => {
       setCount(count - 1)
     }
   }
-  const handleClick = (producto, cantidad) => {
+  const handleClick = () => {
     if (!count == 0) {
-      addToCart(stock, count)
+      stock.cantidad= count
+      addToCart(stock)
       setEstado(false)
     }
   }
