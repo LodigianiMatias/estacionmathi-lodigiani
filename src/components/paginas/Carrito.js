@@ -7,18 +7,22 @@ const Carrito = () => {
   const { carrito, clearCart, deleteFromCart } = useCartContext()
   const [estado, setEstado] = useState(true)
 
-  const subtotal = carrito.map(m => (m.cantidad * m.precio))
-    let total = 0;
-    for (let i = 0 ; i <= subtotal.length; i++) {
-    total += subtotal[i]
-    i++
-  }
+  const subtotal = carrito.map(m => m.cantidad * m.precio)
+  
 
   useEffect(() => {
     if (carrito == false) {
       setEstado(false)
     }
-  }, [carrito, total])
+  }, [carrito])
+
+  let total = 0
+
+	for (let i = 0; i < carrito.length; i++) {
+		const price = carrito[i].precio * carrito[i].cantidad
+
+		total += price
+	}
 
   
 
