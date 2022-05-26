@@ -3,16 +3,10 @@ import CartWidget from "./CartWidget"
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useEffect, useState } from "react"
 const DaysiNavBar = () => {
-    const [productos, setProductos] = useState([])
     const [marcas, setMarcas] = useState([])
 
     useEffect(() => {
       const db = getFirestore();
-
-      const itemsCollection = collection(db,"productosData")
-      getDocs(itemsCollection).then((snapshot) => {
-        setProductos(snapshot.docs.map((doc) => (doc.data())))
-      })
 
       const marcasCollection = collection(db,"marcasData")
       getDocs(marcasCollection).then((snapshot)=> {
@@ -25,7 +19,7 @@ const DaysiNavBar = () => {
         <div className="navbar h-32">
             <div className="flex-1 ">
                 <Link to={'/'}>
-                <img className="logo-header h-32 top-0 left-0 absolute" src="https://i.ibb.co/bKqJhvR/logo-dietetica.jpg"></img></Link>
+                <img className="logo-header h-32 top-0 left-0 absolute" src="https://i.ibb.co/bKqJhvR/logo-dietetica.jpg" alt="logo"></img></Link>
             </div>
             <div className="flex-1">
                 <div className="dropdown dropdown-hover">
@@ -47,10 +41,10 @@ const DaysiNavBar = () => {
             </div>
             <div className="flex-none gap-2">
                 <div className="form-control">
-                    <input type="text" placeholder="Buscar" className="input input-bordered bg-white text-center" />
+                    <input type="search" placeholder="Buscar" className="input input-bordered bg-white text-center" />
                 </div>
             </div>
-            <CartWidget />
+            <CartWidget/>
         </div>
     )
 }

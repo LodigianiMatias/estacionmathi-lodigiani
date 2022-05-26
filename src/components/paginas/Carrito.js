@@ -13,7 +13,7 @@ const Carrito = () => {
 
 
   useEffect(() => {
-    if (carrito == false) {
+    if (carrito === false) {
       setEstado(false)
     }
   }, [carrito])
@@ -35,6 +35,7 @@ const Carrito = () => {
   }
 
   const saveCart = async () => {
+
     const user = {
       nombre: 'Juan',
       apellido: 'Perez',
@@ -59,7 +60,7 @@ const Carrito = () => {
     console.log(response.id);
   }
 
-  
+
 
   return (
     <>
@@ -114,10 +115,11 @@ const Carrito = () => {
             <div className="card-body flex justify-end">
               <h2 className="card-title flex justify-center">Total: ${total}</h2>
               <div className="card-actions justify-center">
-                <button
+                <a href="#item1"> <button
                   className='border-1 border-black border-solid rounded-md text-md btn btn-s hover:bg-green-500 bg-green-300 text-black'
                   onClick={terminarCompra}>
                   Terminar compra</button>
+                </a>
               </div>
             </div>
           </div>
@@ -130,13 +132,15 @@ const Carrito = () => {
           {estadoCompra &&
 
             <>
-              <div className="w-2/4 mb-10 text-6xl text-white bg-slate-800 relative left-1/4 rounded-xl font-bold underline" data-aos="zoom-in">
+              <div id="item1" className="w-2/4 mb-10 text-6xl text-white bg-slate-800 relative left-1/4 rounded-xl font-bold underline" data-aos="zoom-in">
                 Ingrese sus datos<br /><br />
                 <div className="text-3xl">
-                  <input id="1" type="text" placeholder="Nombre" className="input w-full max-w-xs" /><br /><br />
-                  <input id="2" type="text" placeholder="Apellido" className="input w-full max-w-xs" /><br /><br />
-                  <input id="3" type="text" placeholder="Telefono" className="input w-full max-w-xs" /><br /><br />
-                  <input id="4" type="email" placeholder="E-mail" className="input w-full input-md max-w-xs" /><br /><br />
+                  <form>
+                  <input type="text" placeholder="Nombre" className="input w-full max-w-xs" /><br/><br/>
+                  <input type="text" placeholder="Apellido" className="input w-full max-w-xs" /><br/><br/>
+                  <input type="text" placeholder="Telefono" className="input w-full max-w-xs" /><br/><br/>
+                  <input type="email" placeholder="E-mail" className="input w-full input-md max-w-xs" /><br/><br/>
+                  </form>
                   <button
                     className='border-1 border-black border-solid rounded-md text-md btn btn-s hover:bg-green-500 bg-green-300 text-black'
                     onClick={saveCart}>
