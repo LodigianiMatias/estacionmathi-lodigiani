@@ -10,6 +10,7 @@ export const useCartContext = () => {
 
 export const CartProvider = ( {children} ) => {
     const [carrito, setCarrito] = useState([])
+    const [estadoCompra, setEstadoCompra] = useState(false)
 
     const isInCart = (id) => carrito.find((producto) => producto.id == id)
 

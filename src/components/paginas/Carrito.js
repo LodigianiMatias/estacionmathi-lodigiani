@@ -13,7 +13,8 @@ const Carrito = () => {
 
 
   useEffect(() => {
-    if (carrito === false) {
+    if (carrito == false) {
+
       setEstado(false)
     }
   }, [carrito])
@@ -130,7 +131,6 @@ const Carrito = () => {
           </button>
 
           {estadoCompra &&
-
             <>
               <div id="item1" className="w-2/4 mb-10 text-6xl text-white bg-slate-800 relative left-1/4 rounded-xl font-bold underline" data-aos="zoom-in">
                 Ingrese sus datos<br /><br />
@@ -148,8 +148,6 @@ const Carrito = () => {
                 </div>
               </div>
             </>}
-
-
         </div>
       }
       {!estado &&

@@ -7,7 +7,7 @@ const CartWidget = () => {
   const [estado, setEstado] = useState(false) 
 
   const botonEstado = () => {
-      if (estado === false) {
+      if (estado == false) {
         setEstado(true)
       } else {
         setEstado(false)
