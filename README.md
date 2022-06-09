@@ -15,8 +15,7 @@ La página se reiniciara cada vez que usted realice cambios en ella.
 
 ### Que puedo hacer en Estacion Natural MaThi:
 
-Registrarse con usuario y contraseña.\
-Llenar el formulario con sus datos para darlo de alta como cliente .\
+
 Se pueden agregar productos al carrito de compras y visualizar el total de la suma de los productos agregados .\
 También se podrá eliminar elementos del carrito de compras .\
 Filtrar productos por marca, tipo y precio.\
