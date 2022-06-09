@@ -24,7 +24,9 @@ const FooterDaysi = () => {
                 </div>
                 <div>
                     <span className="footer-title" style={estilos}>CONTACTO</span>
-                    <a className="link link-hover">Avenida Directorio 2565, Flores CABA.</a>
+                    <a href="https://www.google.com/maps/place/Estaci%C3%B3n+Natural+MaThi/@-34.6339549,-58.4631112,15z/data=!4m2!3m1!1s0x0:0x8246cea6822f6ddf?sa=X&ved=2ahUKEwj6wNaG8aD4AhUkg5UCHdM1DkIQ_BJ6BAhKEAU" 
+                    className="link link-hover"
+                    target="_blank">Avenida Directorio 2565, Flores CABA.</a>
                     <a className="link link-hover">+54 9 11 0000-0000</a>
                     <a className="link link-hover">estacionnaturalmathi@gmail.com</a>
                 </div>

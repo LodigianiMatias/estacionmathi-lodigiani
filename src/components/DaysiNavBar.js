@@ -36,14 +36,7 @@ const DaysiNavBar = () => {
                     </ul>         
                 </div>
             </div>
-            <div className="flex-1">
-                <Link to={'/promociones'} className="btn btn-ghost normal-case text-3xl text-white font-bold underline">Promociones</Link>
-            </div>
-            <div className="flex-none gap-2">
-                <div className="form-control">
-                    <input type="search" placeholder="Buscar" className="input input-bordered bg-white text-center" />
-                </div>
-            </div>
+            
             <CartWidget/>
         </div>
     )
